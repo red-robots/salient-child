@@ -60,10 +60,18 @@
   padding: 0 0;
 }
 
+body.single-post .blog_next_prev_buttons {
+  margin-top: 35px;
+}
+@media (min-width: 800px) {
+  body.single-post .blog_next_prev_buttons {
+    margin-top: 25px;
+  }
+}
 body.single-post ul.controls.blog-controls {
   max-width: 1000px;
   width: 95%;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   position: relative;
   display: block;
 }

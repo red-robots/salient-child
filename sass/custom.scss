@@ -52,10 +52,16 @@
 	}
 }
 body.single-post {
+	.blog_next_prev_buttons {
+		margin-top: 35px;
+		@include tab {
+			margin-top: 25px;
+		}
+	}
 	ul.controls.blog-controls {
 		max-width: 1000px;
 		width: 95%;
-		margin: 0 auto;
+		margin: 0 auto 40px;
 		position: relative;
 		display: block;
 		@include tab {
