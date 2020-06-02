@@ -222,16 +222,18 @@ $use_excerpt = ( ! empty( $options['blog_auto_excerpt'] ) && $options['blog_auto
 							<a class="entire-meta-link" href="<?php the_permalink(); ?>"></a>
 							
 							<?php
-							echo '<span class="meta-category">';
-							$categories = get_the_category();
-							if ( ! empty( $categories ) ) {
-								$output = null;
-								foreach ( $categories as $category ) {
-									$output .= '<a class="' . $category->slug . '" href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a>';
+							if( $post_type!='post' ) {
+								echo '<span class="meta-category">';
+								$categories = get_the_category();
+								if ( ! empty( $categories ) ) {
+									$output = null;
+									foreach ( $categories as $category ) {
+										$output .= '<a class="' . $category->slug . '" href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a>';
+									}
+									echo trim( $output );
 								}
-								echo trim( $output );
+								echo '</span>';
 							}
-							echo '</span>';
 							?>
 						
 							<div class="post-header">
@@ -258,11 +260,14 @@ $use_excerpt = ( ! empty( $options['blog_auto_excerpt'] ) && $options['blog_auto
 							$excerpt_length = ( ! empty( $options['blog_excerpt_length'] ) ) ? intval( $options['blog_excerpt_length'] ) : 15;
 							echo nectar_excerpt( $excerpt_length );
 							echo '</div>';
-
 							if ( function_exists( 'get_avatar' ) ) {
-									 echo '<div class="grav-wrap"><a href="' . get_author_posts_url( $post->post_author ) . '">' . get_avatar( get_the_author_meta( 'email' ), 70, null, get_the_author() ) . '</a><div class="text"><a href="' . get_author_posts_url( $post->post_author ) . '" rel="author">' . get_the_author() . '</a><span>' . get_the_date() . '</span></div></div>'; }
-
-
+								$authorId = get_the_author_meta('ID');
+								$default_gravatar = get_avatar( get_the_author_meta( 'email' ), 70, null, get_the_author() );
+								$custom_avatar = custom_author_avatar( $authorId, 70 );
+								$author_photo = ($custom_avatar) ? $custom_avatar : $default_gravatar;
+								// echo '<div class="grav-wrap"><a href="' . get_author_posts_url( $post->post_author ) . '">' . $author_photo . '</a><div class="text"><a href="' . get_author_posts_url( $post->post_author ) . '" rel="author">' . ucwords(get_the_author()) . '</a><span>' . get_the_date() . '</span></div></div>'; 
+								echo '<div class="grav-wrap">'.$author_photo.'<div class="text"><span style="display:block;font-size: 14px;">'.ucwords(get_the_author()).'</span><span style="display:block;font-size: 12px;">' . get_the_date() . '</span></div></div>';
+							}
 							?>
 
 					</div><!--post-content-wrap-->
@@ -496,7 +501,9 @@ $use_excerpt = ( ! empty( $options['blog_auto_excerpt'] ) && $options['blog_auto
 						 $hide_featrued_image           = ( ! empty( $options['blog_hide_featured_image'] ) ) ? $options['blog_hide_featured_image'] : '0';
 						 $single_post_header_inherit_fi = ( ! empty( $options['blog_post_header_inherit_featured_image'] ) ) ? $options['blog_post_header_inherit_featured_image'] : '0';
 						if ( is_single() && $hide_featrued_image != '1' && $single_post_header_inherit_fi != '1' ) {
-							echo '<span class="post-featured-img">' . get_the_post_thumbnail( $post->ID, 'full', array( 'title' => '' ) ) . '</span>';
+							if($post_type!='post') {
+								echo '<span class="post-featured-img">' . get_the_post_thumbnail( $post->ID, 'full', array( 'title' => '' ) ) . '</span>';
+							}
 						}
 					} elseif ( $meta_overlaid_style == true && ! is_single() ) {
 
