@@ -155,6 +155,7 @@ if ( $fullscreen_header == true ) {
 				if($post_type=='post') {
 					child_theme_next_post_display();
 					child_theme_related_post_display();
+					get_template_part('includes/subscribe-form');
 				} else {
 					nectar_next_post_display();
 					nectar_related_post_display();
