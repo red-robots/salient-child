@@ -279,77 +279,88 @@ body.single-post {
 #mc_embed_signup * {
 	box-sizing: border-box;
 }
-.container-wrap  #mc_embed_signup{
+.container-wrap .subscribe-form-wrapper {
 	background:#fcfdf1; 
-	font-size: 13px;
-	line-height: 1.2;
 	max-width: 1000px;
 	width: 100%;
 	margin: 0 auto 45px;
-	form {
-		display: block;
-		width: 100%;
-		padding: 20px!important;
-		margin: 0 0!important;
-		input[type="email"],
-		input[type="text"] {
-			font-size: 18px;
-			font-weight: 500;
-			border-radius: 0px;
+	padding: 20px;
+	.subscribeTxt {
+		font-size: 20px;
+		line-height: 1.2;
+		margin: 0 0;
+	}
+	#mc_embed_signup {
+		font-size: 13px;
+		line-height: 1.2;
+		max-width: 100%!important;
+		width: 100%!important;
+		margin: 0 0;
+		form {
+			display: block;
+			width: 100%;
+			padding: 0!important;
+			margin: 0 0!important;
+			input[type="email"],
+			input[type="text"] {
+				font-size: 18px;
+				font-weight: 500;
+				border-radius: 0px;
+			}
 		}
-	}
-	h2 {
-		margin: 0 0!important;
-	}
-	.mc-field-group {
-		width: 100%;
-		margin: 0 0!important;
-	}
-	.mce-button-wrap {
-		width: 100%;
-	}
-	.fullnameCol {
-		width: 100%;
-		float: left;
-		margin-bottom: 25px;
-		.inner {
-			margin-left: -15px;
-			margin-right: -15px;
+		h2 {
+			margin: 0 0!important;
 		}
 		.mc-field-group {
 			width: 100%;
+			margin: 0 0!important;
+		}
+		.mce-button-wrap {
+			width: 100%;
+		}
+		.fullnameCol {
+			width: 100%;
 			float: left;
-			clear: none;
-			margin: 0 0 10px;
-			padding: 0 15px 25px;
-			@include tab {
-				width: 50%;
-				margin: 0 0;
-				padding: 0 15px;
+			margin-bottom: 25px;
+			.inner {
+				margin-left: -15px;
+				margin-right: -15px;
 			}
-			input {
+			.mc-field-group {
 				width: 100%;
 				float: left;
+				clear: none;
+				margin: 0 0 10px;
+				padding: 0 15px 25px;
+				@include tab {
+					width: 50%;
+					margin: 0 0;
+					padding: 0 15px;
+				}
+				input {
+					width: 100%;
+					float: left;
+				}
+			}
+			.mc-field-group:last-child {
+				padding-bottom: 0!important;
 			}
 		}
-		.mc-field-group:last-child {
-			padding-bottom: 0!important;
+		.button {
+			line-height: 40px;
+			height: 40px;
+			padding: 0 60px!important;
+			font-size: 15px;
+			font-weight: bold;
+			transition: all ease .3s;
+			&:hover {
+				background-color: #e69046!important;
+			}
 		}
-	}
-	.button {
-		line-height: 40px;
-		height: 40px;
-		padding: 0 60px!important;
-		font-size: 15px;
-		font-weight: bold;
-		transition: all ease .3s;
-		&:hover {
-			background-color: #e69046!important;
+		div.mce_inline_error {
+			background-color: transparent!important;
+			margin-bottom: 0!important;
 		}
-	}
-	div.mce_inline_error {
-		background-color: transparent!important;
-		margin-bottom: 0!important;
 	}
 }
 

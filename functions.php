@@ -387,5 +387,10 @@ function custom_author_avatar( $authorId, $size) {
 }
 
 
+/*-------------------------------------
+	Adds Options page for ACF.
+---------------------------------------*/
+if( function_exists('acf_add_options_page') ) {acf_add_options_page();}
+
 
 

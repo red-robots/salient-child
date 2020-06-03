@@ -269,46 +269,57 @@ body.single-post .blog-controls li.previous-post:hover h3 span.toptxt i b {
   box-sizing: border-box;
 }
 
-.container-wrap #mc_embed_signup {
+.container-wrap .subscribe-form-wrapper {
   background: #fcfdf1;
-  font-size: 13px;
-  line-height: 1.2;
   max-width: 1000px;
   width: 100%;
   margin: 0 auto 45px;
+  padding: 20px;
 }
-.container-wrap #mc_embed_signup form {
+.container-wrap .subscribe-form-wrapper .subscribeTxt {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0 0;
+}
+.container-wrap .subscribe-form-wrapper #mc_embed_signup {
+  font-size: 13px;
+  line-height: 1.2;
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 0;
+}
+.container-wrap .subscribe-form-wrapper #mc_embed_signup form {
   display: block;
   width: 100%;
-  padding: 20px !important;
+  padding: 0 !important;
   margin: 0 0 !important;
 }
-.container-wrap #mc_embed_signup form input[type=email],
-.container-wrap #mc_embed_signup form input[type=text] {
+.container-wrap .subscribe-form-wrapper #mc_embed_signup form input[type=email],
+.container-wrap .subscribe-form-wrapper #mc_embed_signup form input[type=text] {
   font-size: 18px;
   font-weight: 500;
   border-radius: 0px;
 }
-.container-wrap #mc_embed_signup h2 {
+.container-wrap .subscribe-form-wrapper #mc_embed_signup h2 {
   margin: 0 0 !important;
 }
-.container-wrap #mc_embed_signup .mc-field-group {
+.container-wrap .subscribe-form-wrapper #mc_embed_signup .mc-field-group {
   width: 100%;
   margin: 0 0 !important;
 }
-.container-wrap #mc_embed_signup .mce-button-wrap {
+.container-wrap .subscribe-form-wrapper #mc_embed_signup .mce-button-wrap {
   width: 100%;
 }
-.container-wrap #mc_embed_signup .fullnameCol {
+.container-wrap .subscribe-form-wrapper #mc_embed_signup .fullnameCol {
   width: 100%;
   float: left;
   margin-bottom: 25px;
 }
-.container-wrap #mc_embed_signup .fullnameCol .inner {
+.container-wrap .subscribe-form-wrapper #mc_embed_signup .fullnameCol .inner {
   margin-left: -15px;
   margin-right: -15px;
 }
-.container-wrap #mc_embed_signup .fullnameCol .mc-field-group {
+.container-wrap .subscribe-form-wrapper #mc_embed_signup .fullnameCol .mc-field-group {
   width: 100%;
   float: left;
   clear: none;
@@ -316,20 +327,20 @@ body.single-post .blog-controls li.previous-post:hover h3 span.toptxt i b {
   padding: 0 15px 25px;
 }
 @media (min-width: 800px) {
-  .container-wrap #mc_embed_signup .fullnameCol .mc-field-group {
+  .container-wrap .subscribe-form-wrapper #mc_embed_signup .fullnameCol .mc-field-group {
     width: 50%;
     margin: 0 0;
     padding: 0 15px;
   }
 }
-.container-wrap #mc_embed_signup .fullnameCol .mc-field-group input {
+.container-wrap .subscribe-form-wrapper #mc_embed_signup .fullnameCol .mc-field-group input {
   width: 100%;
   float: left;
 }
-.container-wrap #mc_embed_signup .fullnameCol .mc-field-group:last-child {
+.container-wrap .subscribe-form-wrapper #mc_embed_signup .fullnameCol .mc-field-group:last-child {
   padding-bottom: 0 !important;
 }
-.container-wrap #mc_embed_signup .button {
+.container-wrap .subscribe-form-wrapper #mc_embed_signup .button {
   line-height: 40px;
   height: 40px;
   padding: 0 60px !important;
@@ -337,10 +348,10 @@ body.single-post .blog-controls li.previous-post:hover h3 span.toptxt i b {
   font-weight: bold;
   transition: all ease 0.3s;
 }
-.container-wrap #mc_embed_signup .button:hover {
+.container-wrap .subscribe-form-wrapper #mc_embed_signup .button:hover {
   background-color: #e69046 !important;
 }
-.container-wrap #mc_embed_signup div.mce_inline_error {
+.container-wrap .subscribe-form-wrapper #mc_embed_signup div.mce_inline_error {
   background-color: transparent !important;
   margin-bottom: 0 !important;
 }
