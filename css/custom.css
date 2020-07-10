@@ -356,6 +356,34 @@ body.single-post .blog-controls li.previous-post:hover h3 span.toptxt i b {
   margin-bottom: 0 !important;
 }
 
+#footer-outer #copyright a {
+  transition: all ease 0.3s;
+}
+#footer-outer #copyright a:hover {
+  color: #d68845 !important;
+}
+
+#additionFootLinks {
+  display: inline-block;
+  margin-left: 5px;
+}
+#additionFootLinks a {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  padding-left: 10px;
+}
+#additionFootLinks a:before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 15px;
+  background: #FFF;
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+
 @media screen and (max-width: 1370px) {
   #header-outer #top ul.sf-menu > li#menu-item-290 {
     width: 100px;

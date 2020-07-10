@@ -363,7 +363,32 @@ body.single-post {
 		}
 	}
 }
-
+#footer-outer #copyright a {
+	transition: all ease .3s;
+	&:hover {
+		color: #d68845!important;
+	}
+}
+#additionFootLinks {
+	display: inline-block;
+	margin-left: 5px;
+	a {
+		display: inline-block;
+		text-decoration: none;
+		position: relative;
+		padding-left: 10px;
+		&:before {
+			content: "";
+			display: block;
+			width: 1px;
+			height: 15px;
+			background: #FFF;
+			position: absolute;
+			top: 3px;
+			left: 0;
+		}
+	}
+}
 @media screen and (max-width: 1370px) {
 	#header-outer #top ul.sf-menu > li#menu-item-290 {
 		width: 100px;
